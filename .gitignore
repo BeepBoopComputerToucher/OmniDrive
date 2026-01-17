@@ -1,0 +1,5 @@
+build/
+firmware/*
+!firmware/.gitkeep
+patched_firmware/*
+!patched_firmware/.gitkeep
