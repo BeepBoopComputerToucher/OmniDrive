@@ -12,7 +12,7 @@
 .definedatalabel CommandTableDVDRead2,0x14FFD8
 .definedatalabel CommandTableDVDRead3,0x14FFE0
 .definedataLabel CommandTableBDRead1,0x150248
-.definedataLabel CommandTableBDRead2,0x15024E
+.definedataLabel CommandTableBDRead2,0x150250
 .definedatalabel CommandTableEnd,0x14FEA4
 
 ; Data
