@@ -57,6 +57,11 @@ void ChangeDiscRWModeHook(DWORD mode) {
 }
 
 void EnableXGD() {
+    // check DMI to see if first byte is 1 or 2
+    BYTE dmiIndicator = ReadDiscStructMemDWORD(0x5800) >> 24;
+    if (dmiIndicator != 1 && dmiIndicator != 2)
+        return;
+
     seekLayer = 1;
     startAddress = 0xFD0210;
 
@@ -69,6 +74,12 @@ void EnableXGD() {
     }
 
     CopySectorToDiscStructMem(0x6800, 0xE);
+    BYTE discIdentifier = ReadDiscStructMemDWORD(0x6800) >> 24;
+
+    // check disc identifier to make sure sector is the security sector
+    if (discIdentifier != 0xD1 && discIdentifier != 0xE1)
+        return;
+
     layer0End = ReadDiscStructMemDWORD(0x680C);
     lastSector = ReadDiscStructMemDWORD(0x5008) | 0xFF000000;
     lastSector += 2 * (layer0End + 1);
@@ -86,7 +97,7 @@ DWORD ReadDVDTOCHook(DWORD unk) {
 
     DWORD ret = ReadDVDTOC(unk);
 
-    if (DiscIsMultiLayer())
+    if ((DiscIsMultiLayer()) && !isDiscPTP)
         EnableXGD();
 
     // If Nintendo Disc, enable BCA
