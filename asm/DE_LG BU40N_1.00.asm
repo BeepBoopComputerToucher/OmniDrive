@@ -21,8 +21,8 @@
 .definedatalabel forceUnitAccess,0x01FFBE0D
 .definedatalabel seekLayer,0x01FFBE1D
 .definedatalabel isDiscPTP,0x01FFBE23
-.definedatalabel memoryStart,0x02000C78
-.definedatalabel discStructOffset,0x02000C7C
+.definedatalabel memoryStart,0x02000C78 // 0x1C08000
+.definedatalabel discStructOffset,0x02000C7C // 0x327C80
 .definedatalabel lastSector,0x02000CA0
 .definedatalabel startAddress,0x02000CA4
 .definedatalabel transferLength,0x02000CB0
@@ -77,6 +77,7 @@
 .definedataLabel DVDScramblePatchAddr,0x144A32
 .definedatalabel DVDScrambleHookAddr,0x144A36
 .definedatalabel DVDEDCHookAddr,0x144D8E
+.definedatalabel InquiryDataPatch,0x14F83E
 
 ; offsets
 TocOffsetValue equ 0x8D70

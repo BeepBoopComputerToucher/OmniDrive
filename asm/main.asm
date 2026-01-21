@@ -17,6 +17,12 @@ CommandTableCustom:
     .importobj "../build/libOmniDrive.a"
 .endregion
 
+.org InquiryDataPatch
+    .ascii "OmniDrive"
+    .d8 1 ; major
+    .d8 0 ; minor
+    .d8 0 ; patch
+
 .org CommandTableEnd
     ; Set next table to custom
     .d8 0x00
@@ -68,7 +74,6 @@ CommandTableCustom:
 
 .org BDScramblePatchAddr
     nop
-
 .org BDScrambleHookAddr
     bl ChangeDiscRWModeHook
 
@@ -89,13 +94,10 @@ CommandTableCustom:
 
 .org BDIdentifierPatchAddr1
     nop
-
 .org BDIdentifierPatchAddr2
     .d8 0xE0 ; beq -> b
-
 .org BDIdentifierPatchAddr3
     nop
-
 .org BDIdentifierPatchAddr4
     nop
 

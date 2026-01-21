@@ -77,6 +77,7 @@
 .definedataLabel DVDScramblePatchAddr,0x147C38
 .definedatalabel DVDScrambleHookAddr,0x147C3C
 .definedatalabel DVDEDCHookAddr,0x147F8C
+.definedatalabel InquiryDataPatch,0x152686
 
 ; offsets
 TocOffsetValue equ 0x8D80
