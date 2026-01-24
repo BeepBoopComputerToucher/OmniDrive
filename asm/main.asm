@@ -103,5 +103,3 @@ CommandTableCustom:
 
 .org SetBDCharacteristicsHookAddr
     bl SetBDCharacteristicsHook
-
-; F1 01 01 F9 6D AA 79 58 D1 19
