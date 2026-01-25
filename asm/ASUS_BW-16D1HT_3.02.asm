@@ -39,7 +39,7 @@
 .definethumblabel BDReadCmd,0x0AE574
 .definethumblabel ReadDiscData,0x0BF244 // F3 B5 C8 20
 .definethumblabel ReadCDDA,0x0C89DA // F0 B5 ?? 48 8D B0 
-.definethumblabel LBAtoMSF,0x0C98FA // 31 B5 6B 46 D8 78
+.definethumblabel MSFtoLBA,0x0C995E
 .definethumblabel DVDReadCmd,0x11A61C
 .definethumblabel DVDCheckLayer,0x1418A8 //  64 1E 00 22 (-0xE)
 .definethumblabel ReadBDData,0x14241C

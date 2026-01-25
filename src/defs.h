@@ -35,7 +35,7 @@ extern void ReturnSense(int key, int code, int qualifier);
 extern void BDReadCmd();
 extern DWORD ReadDiscData(DWORD discArea, BYTE sectorCount);
 extern void ReadCDDA();
-extern DWORD LBAtoMSF(DWORD lba);
+extern DWORD MSFtoLBA(DWORD msf);
 extern void DVDReadCmd();
 extern DWORD DVDCheckLayer(DWORD discType);
 extern void ReadBDData(DWORD fua);

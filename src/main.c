@@ -202,11 +202,11 @@ void ReadCDRaw() {
     startAddress = (cdb[2] << 24) | (cdb[3] << 16) | (cdb[4] << 8) | (cdb[5]);
     transferLength = (cdb[6] << 24) | (cdb[7] << 16) | (cdb[8] << 8) | (cdb[9]);
     
-    if (!(cdb[1] & 0x04)) {
+    if (!(cdb[1] & 0x04))
         // if not using raw addressing
         startAddress += 150;
-        startAddress = LBAtoMSF(startAddress);
-    }
+    else
+        startAddress = MSFtoLBA(startAddress);
 
     if (cdb[1] & 0x08)
         forceUnitAccess = 0xFF;
