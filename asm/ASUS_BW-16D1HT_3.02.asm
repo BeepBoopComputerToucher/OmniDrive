@@ -69,6 +69,7 @@
 .definedatalabel DVDLeadOutPatchAddr4,0x141966
 .definedatalabel DVDLeadOutPatchAddr5,0x141978
 .definedatalabel DVDLeadOutPatchAddr6,0x141988
+.definedatalabel BDLeadOutPatchAddr,0x142335
 .definedatalabel BDScramblePatchAddr,0x142494
 .definedatalabel BDScrambleHookAddr,0x142498
 .definedatalabel BDEDCHookAddr,0x142F6A

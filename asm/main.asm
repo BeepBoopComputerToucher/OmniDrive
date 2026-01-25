@@ -64,6 +64,9 @@ CommandTableCustom:
 .org DVDLeadOutPatchAddr6
     nop
 
+.org BDLeadOutPatchAddr
+    .d8 0xE0 ; bne -> b
+
 .org CDLeadOutPatchAddr1
     mov r0,#0x20
 .org CDLeadOutPatchAddr2
