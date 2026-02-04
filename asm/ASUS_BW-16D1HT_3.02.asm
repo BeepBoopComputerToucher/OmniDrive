@@ -62,6 +62,7 @@
 .definedatalabel BDIdentifierPatchAddr2,0x0E0449 // branch
 .definedatalabel BDIdentifierPatchAddr3,0x0E0522 // nop
 .definedatalabel BDIdentifierPatchAddr4,0x0E055E // nop
+.definedatalabel CDLeadOutPatchAddr0,0x131D28
 .definedataLabel DVDLeadOutPatchAddr0,0x1418EF
 .definedatalabel DVDLeadOutPatchAddr1,0x14192E
 .definedatalabel DVDLeadOutPatchAddr2,0x141944
@@ -74,7 +75,12 @@
 .definedatalabel BDScrambleHookAddr,0x142498
 .definedatalabel BDEDCHookAddr,0x142F6A
 .definedatalabel CDLeadOutPatchAddr1,0x145A34
-.definedatalabel CDLeadOutPatchAddr2,0x145B34
+;.definedatalabel CDLeadOutPatchAddr2,0x145B34
+.definedatalabel CDLeadOutPatchAddr2,0x145A68 // nop
+.definedatalabel CDLeadOutPatchAddr3,0x145A70 // nop
+.definedatalabel CDLeadOutPatchAddr4,0x145A78 // nop
+.definedatalabel CDLeadOutPatchAddr5,0x145B12 // nop
+.definedatalabel CDLeadOutPatchAddr6,0x145B2C // nop
 .definedataLabel DVDScramblePatchAddr,0x147C38
 .definedatalabel DVDScrambleHookAddr,0x147C3C
 .definedatalabel DVDEDCHookAddr,0x147F8C

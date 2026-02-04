@@ -67,10 +67,21 @@ CommandTableCustom:
 .org BDLeadOutPatchAddr
     .d8 0xE0 ; bne -> b
 
+.org CDLeadOutPatchAddr0
+    .d8 0x06 ; check if gte 6 rather than 5, 5 is lead-out
 .org CDLeadOutPatchAddr1
-    mov r0,#0x20
+    mov r0,#0x00
 .org CDLeadOutPatchAddr2
-    mov r0,#0x20
+    ;mov r0,#0x20
+    nop
+.org CDLeadOutPatchAddr3
+    nop
+.org CDLeadOutPatchAddr4
+    nop
+.org CDLeadOutPatchAddr5
+    nop
+.org CDLeadOutPatchAddr6
+    nop
 
 .org ScrambleHookAddr
     bl ChangeDiscRWModeHook
