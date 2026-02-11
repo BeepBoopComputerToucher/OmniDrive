@@ -75,7 +75,6 @@
 .definedatalabel BDScrambleHookAddr,0x142498
 .definedatalabel BDEDCHookAddr,0x142F6A
 .definedatalabel CDLeadOutPatchAddr1,0x145A34
-;.definedatalabel CDLeadOutPatchAddr2,0x145B34
 .definedatalabel CDLeadOutPatchAddr2,0x145A68 // nop
 .definedatalabel CDLeadOutPatchAddr3,0x145A70 // nop
 .definedatalabel CDLeadOutPatchAddr4,0x145A78 // nop
