@@ -27,6 +27,7 @@ extern BYTE cdb[16];
 extern DWORD layer0End;
 extern DWORD layer1End;
 extern DWORD layer2End;
+extern WORD readTimeCounter;
 
 extern void ChangeDiscRWMode(DWORD mode);
 extern DWORD SetErrorMode(DWORD discType, DWORD mask, DWORD mode);

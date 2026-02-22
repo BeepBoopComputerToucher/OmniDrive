@@ -218,6 +218,7 @@ void ReadCDRaw() {
         SetCDType(0, 1); // Audio with SubQ only
     else
         SetCDType(0, 0); // Audio
+
     if (subChannels) {
         DISC_SECTOR_REGISTER |= 0x01; // enable subs
     }
@@ -232,6 +233,8 @@ void ReadCDRaw() {
 void CmdOmniDriveReadDiscRaw() {
     if (!mediaType)
         ReturnSense(0x02, 0x3A, 0x00); // MEDIUM NOT PRESENT
+
+    readTimeCounter = 0;
 
     BYTE DiscType = cdb[1] & 0x03;
     if (DiscType == 0) {

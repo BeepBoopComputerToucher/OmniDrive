@@ -26,6 +26,7 @@
 .definedatalabel lastSector,0x02000C5C
 .definedatalabel startAddress,0x02000C60
 .definedatalabel transferLength,0x02000C6C
+.definedatalabel readTimeCounter,0x02000C80
 .definedatalabel cdb,0x02000CFC
 .definedatalabel layer0End,0x02000D6C
 .definedatalabel layer1End,0x02000D70
