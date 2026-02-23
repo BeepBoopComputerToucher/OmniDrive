@@ -53,6 +53,9 @@ CommandTableCustom:
         .d32 DVDCharacteristicsPatchAddr
 .thumb
 
+.org CDDataSpeedPatchAddr
+    nop
+
 .org CommandTableBDRead1
     .d32 BDReadCmdHook+1
 .org CommandTableBDRead2
