@@ -6,6 +6,10 @@ void WriteDiscStructMemByte(DWORD offset, BYTE value) {
     *(BYTE*)offset_ = value;
 }
 
+BYTE IsReadCommand() {
+    return (cdb[0] == 0x28 || cdb[0] == 0xA8 || cdb[0] == 0xB9 || cdb[0] == 0xBE || cdb[0] == 0xC0);
+}
+
 DWORD SetBDCharacteristicsHook() {
     if (*(DWORD*)(memoryStart + BDDIOffset) == 0) {
         // most likely Wii U disc, add DI PSN values

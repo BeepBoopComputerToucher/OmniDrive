@@ -56,6 +56,9 @@
 .definedatalabel DVDCharacteristicsPatchAddr,0x01F96DAA
 
 ; Inline patches
+.definedatalabel ReadSpeedPatchAddr,0x018AE6
+.definedatalabel ReadCommandTrueAddr,0x018AF4
+.definedatalabel ReadCommandFalseAddr,0x018BE6
 .definedatalabel SetBDCharacteristicsHookAddr,0x09E6BC
 .definedatalabel ReadDVDTOCHookAddr,0x09F000
 .definedatalabel ScrambleHookAddr,0x0A1990

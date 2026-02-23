@@ -14,8 +14,14 @@ CommandTableCustom:
     .d16 0x00
     .d32 0x00
 
-    .importobj "../build/libOmniDrive.a"
+.importobj "../build/libOmniDrive.a"
 .endregion
+
+.org ReadSpeedPatchAddr
+    bl IsReadCommand
+    cmp R0,#1
+    bne ReadCommandFalseAddr
+    b ReadCommandTrueAddr
 
 .org InquiryDataPatch
     .ascii "OmniDrive"
